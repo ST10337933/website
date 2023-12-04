@@ -1,0 +1,246 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Creating Purpose-Services</title>
+    <link rel="stylesheet" href="services.css">
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    <link href="https://fonts.googleapis.com/css2?family=Raleway:wght@300&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="sidebar">
+        <div class="logo-content">
+            <div class="logo">
+                <div class="logo-logo">
+                    <img src="media/logo.png">
+                </div>
+            </div>
+            <!--the logo for the website-->
+            <i class='bx bx-menu' id="btn"></i>
+        </div>
+        <ul class="nav-list">
+            <li>
+                    <i class='bx bx-search'></i>
+                    <input type="text" placeholder="Search...">
+                <span class="tooltip">Search</span>
+            </li>
+            <!--this is the search bar in the navigation bar-->
+            <li>
+                <a href="index.html">
+                    <i class='bx bxs-home'></i>
+                    <span class="links_name">Home</span>
+                </a>
+                <span class="tooltip">Home</span>
+            </li>
+            <!--this is the home button in the navigation bar-->
+            <li>
+                <a href="about.html">
+                    <i class='bx bxs-group'></i>
+                    <span class="links_name">About Us</span>
+                </a>
+                <span class="tooltip">About</span>
+            </li>
+            <!--this is the about button in the navigation bar-->
+            <li>
+                <a href="services.html">
+                    <i class='bx bxs-server'></i>
+                    <span class="links_name">Courses</span>
+                </a>
+                <span class="tooltip">Courses</span>
+            </li>
+            <!--this is the services button in the navigation bar-->
+            <li>
+                <a href="cart.html">
+                    <i class='bx bxs-cart-alt'></i>
+                    <span class="links_name">Cart</span>
+                </a>
+                <span class="tooltip">Cart</span>
+            </li>
+            <!--this is the news button in the navigation bar-->
+            <li>
+                <a href="contact.html">
+                    <i class='bx bxs-contact'></i>
+                    <span class="links_name">Contact Us</span>
+                </a>
+                <span class="tooltip">Contact</span>
+            </li>
+            <!--this is the contact button in the navigation bar3-->
+            <!--this is the donations button for the naivigation bar-->
+            <li>
+                <a href="form.html">
+                    <i class='bx bxs-user'></i>
+                    <span class="links_name">Sign in</span>
+                </a>
+                <span class="tooltip">Sign in</span>
+            </li>
+            <!--this is the login form for the naviagtion bar-->
+        </ul>
+    </div>
+
+    <script>
+        let btn = document.querySelector("#btn");
+        let sidebar = document.querySelector(".sidebar");
+        let searchBtn = document.querySelector("bx-search")
+
+        btn.onclick = function() {
+            sidebar.classList.toggle("active");
+        }
+        searchBtn.onclick = function() {
+            sidebar.classList.toggle("active");
+        }
+    </script>
+        <!--html code for the navigation bar ends here-->
+        <div class="wrapper">
+            <h1>What we provide</h1>
+            <p></p>
+            <div class="content-box">
+                <div class="card">
+                    <i class=""></i>
+                    <h2>3 MONTH COURSES</h2>
+                    <p>
+                        Our 3 month courses: <br>
+                        * Child Minding
+                        <br>
+                        * Cooking
+                        <br>
+                        * Garden Maintenance
+                    </p>
+                </div>
+                <div class="card">
+                    <i class=""></i>
+                    <h2>6 MONTH COURSES</h2>
+                    <p>
+                        Our 6 month courses: <br>
+                        * First aid
+                        <br>
+                        * Sewing
+                        <br>
+                        * Landscaping
+                        <br>
+                        * Life Skills 
+                    </p>
+                </div>
+                
+            </div>
+    
+        </div>
+<!--the services content start from here, the 6 differnt cards and icons -->
+    <div class="wrapper">
+        <h1>Courses</h1>
+        <p></p>
+        <div class="content-box">
+            <div class="card">
+                <i class=""></i>
+                <h2>First Aid</h2>
+                <p>
+                    Participating in a first aid course is a crucial step towards equipping oneself with essential life-saving skills. These courses provide individuals with practical knowledge and hands-on training in responding to emergencies, such as injuries, sudden illnesses, or accidents. Participants learn how to assess the situation, administer basic first aid, and perform CPR, fostering the confidence to act swiftly in critical moments. Instructors often cover topics like wound care, bandaging techniques, and the proper use of automated external defibrillators (AEDs). Beyond the practical skills, first aid courses emphasize the importance of remaining calm under pressure and communicating effectively in emergency situations. Overall, a first aid course is an invaluable investment in personal and community safety, empowering individuals to be proactive and potentially make a life-changing difference when it matters most.
+                </p>
+                <a href="firstaid.html">Readmore</a>
+            </div>
+            <div class="card">
+                <i class=""></i>
+                <h2>Sewing</h2>
+                <p>
+                    Embarking on a sewing course is a delightful journey into the world of creativity and craftsmanship. These courses cater to both beginners and seasoned enthusiasts, offering a comprehensive understanding of sewing techniques and garment construction. Participants learn the basics of operating a sewing machine, selecting fabrics, and deciphering patterns. Instructors guide students through the intricacies of stitching, hemming, and creating various seams, allowing them to gradually master the art of garment assembly. Beyond the technical skills, sewing courses often nurture a sense of design and personal style, encouraging participants to express their creativity through fabric choices and unique embellishments. Whether one aspires to mend clothes, craft custom garments, or simply explore a fulfilling hobby, a sewing course provides the foundation for a rewarding and practical skill set.
+                </p>
+                <a href="sewing.html">Readmore</a>
+            </div>
+            <div class="card">
+                <i class="" ></i>
+                <h2>Landscaping</h2>
+                <p>
+                    Embarking on a landscaping course opens the door to transforming outdoor spaces into aesthetically pleasing and functional environments. These courses are designed to impart a comprehensive understanding of plant selection, garden design principles, and the art of creating harmonious outdoor settings. Participants delve into topics such as soil composition, plant care, and horticulture techniques, gaining the knowledge needed to cultivate and maintain vibrant green spaces. Additionally, landscaping courses often cover elements like irrigation systems, hardscaping, and sustainable landscaping practices, providing a well-rounded education in the field. Whether for personal enrichment or professional development, a landscaping course equips individuals with the skills to breathe life into outdoor areas, fostering a deep appreciation for the synergy between nature and design.
+                </p>
+                <a href="landscaping.html">Readmore</a>
+            </div>
+            <div class="card">
+                <i class=""></i>
+                <h2>Cooking</h2>
+                <p>
+                    Embarking on a cooking course is a delightful journey into the world of culinary artistry. These courses cater to individuals of all skill levels, providing a hands-on exploration of diverse cuisines, techniques, and flavors. Participants learn fundamental cooking skills, from knife techniques to precise measurements, and gain an understanding of ingredient pairing and flavor profiles. Instructors guide students through the preparation of various dishes, fostering both creativity and precision in the kitchen. Cooking courses often cover a spectrum of culinary styles, dietary considerations, and presentation aesthetics, empowering participants to express themselves through the medium of food. Whether aiming to hone basic skills or aspiring to become a culinary maestro, a cooking course is a delectable opportunity to savor the joy of creating delicious and memorable meals.
+                </p>
+                <a href="cooking.html">Readmore</a>
+            </div>
+            <div class="card">
+                <i class=""></i>
+                <h2>Child minding</h2>
+                <p>
+                    Enrolling in a child minding course is a valuable step towards developing the essential skills and knowledge required to provide nurturing and safe environments for children. These courses cover a range of topics, including child development, health and safety protocols, and effective communication with both children and their parents or guardians. Participants learn about age-appropriate activities, nutritional needs, and strategies for managing challenging behaviors, fostering a holistic understanding of childcare. Additionally, child minding courses often emphasize the importance of creating engaging and educational experiences that promote a child's cognitive, social, and emotional development. Whether aspiring to become a professional childcare provider or seeking to enhance personal caregiving abilities, a child minding course offers a foundation for responsible and attentive childcare practices.
+                </p>
+                <a href="childminding.html">Readmore</a>
+            </div>
+            <div class="card">
+                <i class=""></i>
+                <h2>Garden maintainance</h2>
+                <p>
+                    Enrolling in a garden maintenance course is an enriching journey for individuals eager to cultivate green spaces with expertise and care. These courses delve into the principles of garden upkeep, covering topics such as plant health, pruning techniques, pest management, and seasonal maintenance practices. Participants gain practical skills in soil management, irrigation systems, and the selection of appropriate tools and equipment. Instructors often emphasize sustainable and environmentally friendly practices, providing a holistic approach to garden care. Whether for personal garden enhancement or professional landscaping aspirations, a garden maintenance course equips individuals with the knowledge and skills to nurture thriving outdoor spaces, ensuring they remain beautiful and vibrant throughout the seasons.
+                </p>
+                <a href="gardenmain.html">Readmore</a>
+            </div>
+            <div class="card">
+                <i class=""></i>
+                <h2>Life skills</h2>
+                <p>
+                    Embarking on a life skills course is an empowering journey towards personal development and resilience. These courses are designed to equip individuals with the practical skills necessary for navigating the challenges of everyday life. Participants delve into a range of essential topics, including communication, time management, problem-solving, and stress management. Instructors guide students through exercises that enhance self-awareness, emotional intelligence, and interpersonal skills. Life skills courses often cover financial literacy, decision-making, and goal-setting, providing a well-rounded foundation for success in both personal and professional spheres. Whether for students entering adulthood or individuals seeking continuous self-improvement, a life skills course fosters the tools and mindset needed to lead a fulfilling and well-balanced life.
+                </p>
+                <a href="lifeskills.html">Readmore</a>
+            </div>
+        </div>
+
+    </div>
+    
+    <footer class="footer">
+        <div class="footer-left">
+            <img src="media/logo.png">
+            <p>
+                Empowering The Nation is a small business created by Precious Redebe, this business functions as a
+            initiative for domestic workers, field workers or under privalged individuals. This business provides
+            small courses to these under privalged people. These courses give a variaty of information.
+            </p>
+            <div class="socials">
+                <a href="#"><i class='bx bxl-facebook-square'></i></a>
+                <a href="#"><i class='bx bxl-instagram-alt'></i></a>
+                <a href="#"><i class='bx bxl-twitter'></i></a>
+                <a href="#"><i class='bx bxl-youtube'></i></a>
+            </div>
+        </div>
+        <ul class="footer-right">
+            <li>
+                <h2>Quick Links</h2>
+    
+                <ul class="box">
+                    <li><a href="about.html">About Us</a></li>
+                    <li><a href="services.html">Courses</a></li>
+                    <li><a href="cart.html">Checkout</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                </ul>
+            </li>
+            <li class="features">
+               <h2>What we offer</h2>
+    
+               <ul class="box">
+                <li><a href="donations.html">3 Month courses</a></li>
+                <li><a href="donations.html">6 Month courses</a></li>
+                <li><a href="donations.html">Cart</a></li>
+                <li><a href="volunteer.html">Checkout</a></li>
+               </ul>
+            </li>
+            <li>
+               <h2>Contact</h2>
+    
+               <ul class="box">
+                <li><a href="contact.html">+27 68 347 0249</a></li>
+                <li><a href="contact.html">empoweringthenation@gmail.com</a></li>
+                <li><a href="contact.html">12 Radar Dr, Durban North, Durban, 4051</a></li>
+                <li><a href="contact.html">20 Shakes Centre, Cardinal Road</a></li>
+               </ul>
+            </li>
+        </ul>
+        <div class="footer-bottom">
+            <p>All rights reserved by &copy;Empowering The Nation 2023.</p>
+        </div>
+    </footer>
+</body>
+</html>

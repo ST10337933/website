@@ -1,0 +1,45 @@
+[
+    {
+        "id": 1,
+        "name": "First Aid",
+        "price": 1500,
+        "image": "media/1.jpg"
+    },
+    {
+        "id": 2,
+        "name": "Sewing",
+        "price": 1500,
+        "image": "media/2.jpg"
+    },
+    {
+        "id": 3,
+        "name": "Landscaping",
+        "price": 1500,
+        "image": "media/3.jpg"
+    }
+    ,
+    {
+        "id": 4,
+        "name": "Life Skills",
+        "price": 1500,
+        "image": "media/4.jpg"
+    },
+    {
+        "id": 5,
+        "name": "Child Minding",
+        "price": 750,
+        "image": "media/5.jpg"
+    },
+    {
+        "id": 6,
+        "name": "Cooking",
+        "price": 750,
+        "image": "media/6.jpg"
+    },
+    {
+        "id": 7,
+        "name": "Garden Maintainance",
+        "price": 750,
+        "image": "media/7.jpg"
+    }
+]

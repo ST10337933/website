@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Creating Purpose-Sign In</title>
+    <link rel="stylesheet" href="form.css">
+    <script defer src="form.js"></script>
+</head>
+<body>
+    <div class="container">
+        <form action="/" id="form">
+            <h1>Registration</h1>
+            <div class="input-control">
+                <label for="username">Username</label>
+                <input id="username" name="username" type="text">
+                <div class="error"></div>
+            </div>
+            <div class="input-control">
+                <label for="email">Email</label>
+                <input id="email" name="email" type="text">
+                <div class="error"></div>
+            </div>
+            <div class="input-control">
+                <label for="password">Password</label>
+                <input id="password" name="password" type="password">
+                <div class="error"></div>
+            </div>
+            <div class="input-control">
+                <label for="password">Password again</label>
+                <input id="password2" name="password2" type="password">
+                <div class="error"></div>
+            </div>
+            <input type="checkbox" class="checkbox"><span>I agree to the Terms and Conditions</span>
+            <br>
+             <span>Already have an account <a href="">Login Now</a></span>
+            <button type="submit">Sign Up</button>
+        </form>
+    </div>
+</body>
+</html>

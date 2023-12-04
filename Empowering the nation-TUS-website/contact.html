@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    <link href="https://fonts.googleapis.com/css2?family=Raleway:wght@300&display=swap" rel="stylesheet">
+	<link rel="stylesheet" href="contact.css">
+	<title>Creating Purpose-CONTACT US</title>
+</head>
+<style>
+	body{
+		background-color: rgba(251,231,239);
+	}
+</style>
+<!--simple background color-->
+<body>
+    <div class="sidebar">
+        <div class="logo-content">
+            <div class="logo">
+                <div class="logo-logo">
+                    <img src="media/logo.png">
+                </div>
+            </div>
+            <!--the logo for the website-->
+            <i class='bx bx-menu' id="btn"></i>
+        </div>
+        <ul class="nav-list">
+            <li>
+                    <i class='bx bx-search'></i>
+                    <input type="text" placeholder="Search...">
+                <span class="tooltip">Search</span>
+            </li>
+            <!--this is the search bar in the navigation bar-->
+            <li>
+                <a href="index.html">
+                    <i class='bx bxs-home'></i>
+                    <span class="links_name">Home</span>
+                </a>
+                <span class="tooltip">Home</span>
+            </li>
+            <!--this is the home button in the navigation bar-->
+            <li>
+                <a href="about.html">
+                    <i class='bx bxs-group'></i>
+                    <span class="links_name">About Us</span>
+                </a>
+                <span class="tooltip">About</span>
+            </li>
+            <!--this is the about button in the navigation bar-->
+            <li>
+                <a href="services.html">
+                    <i class='bx bxs-server'></i>
+                    <span class="links_name">Courses</span>
+                </a>
+                <span class="tooltip">Courses</span>
+            </li>
+            <!--this is the services button in the navigation bar-->
+            <li>
+                <a href="cart.html">
+                    <i class='bx bxs-cart-alt'></i>
+                    <span class="links_name">Cart</span>
+                </a>
+                <span class="tooltip">Cart</span>
+            </li>
+            <!--this is the news button in the navigation bar-->
+            <li>
+                <a href="contact.html">
+                    <i class='bx bxs-contact'></i>
+                    <span class="links_name">Contact Us</span>
+                </a>
+                <span class="tooltip">Contact</span>
+            </li>
+            <!--this is the contact button in the navigation bar3-->
+            <!--this is the donations button for the naivigation bar-->
+            <li>
+                <a href="form.html">
+                    <i class='bx bxs-user'></i>
+                    <span class="links_name">Sign in</span>
+                </a>
+                <span class="tooltip">Sign in</span>
+            </li>
+            <!--this is the login form for the naviagtion bar-->
+        </ul>
+    </div>
+
+    <script>
+        let btn = document.querySelector("#btn");
+        let sidebar = document.querySelector(".sidebar");
+        let searchBtn = document.querySelector("bx-search")
+
+        btn.onclick = function() {
+            sidebar.classList.toggle("active");
+        }
+        searchBtn.onclick = function() {
+            sidebar.classList.toggle("active");
+        }
+    </script>
+<!--the html code for the navigationbar ends here-->	
+<section class="contact">
+	<div class="content">
+		<h1>CONTACT US</h1>
+		<p>If you have any queries or questions send us a message.</p>
+	</div>
+	<div class="container">
+		<div class="contactInfo">
+		<div class="box">
+		<div class="icon"></div>
+		<div class="text">
+			<h3>Address</h3>
+			<p>12 Radar Dr,<br> Durban North, Durban,<br> 4051</p>
+		</div>
+		 </div>
+		 <div class="box">
+			<div class="icon"></div>
+			<div class="text">
+				<h3>Phone</h3>
+				<p>+27 68-347-0249</p>
+		</div>
+	</div>
+	<div class="box">
+		<div class="icon"></div>
+		<div class="text">
+			<h3>Email</h3>
+			<p>araavdhanraj@gmail.com</p>
+		</div>
+    </div>
+	</div>
+	<!--contact information ends here-->
+    <div class="container">
+        <form action="/" id="form">
+            <h1>Registration</h1>
+            <div class="input-control">
+                <label for="username">Username</label>
+                <input id="username" name="username" type="text">
+                <div class="error"></div>
+            </div>
+            <div class="input-control">
+                <label for="email">Email</label>
+                <input id="email" name="email" type="text">
+                <div class="error"></div>
+            </div>
+            <div class="input-control">
+                <label for="password">Send us a message</label>
+                <input id="password" name="password" type="textbox">
+                <div class="error"></div>
+            </div>
+            <span>Thank you for contacting us</span>
+            <button type="submit">Submit</button>
+        </form>
+  </div>
+</section>
+<script src="conatct.js"></script>
+
+<footer class="footer">
+    <div class="footer-left">
+        <img src="media/logo.png">
+        <p>small parragraph hereeee
+        </p>
+        <div class="socials">
+            <a href="#"><i class='bx bxl-facebook-square'></i></a>
+            <a href="#"><i class='bx bxl-instagram-alt'></i></a>
+            <a href="#"><i class='bx bxl-twitter'></i></a>
+            <a href="#"><i class='bx bxl-youtube'></i></a>
+        </div>
+    </div>
+    <ul class="footer-right">
+        <li>
+            <h2>Quick Links</h2>
+
+            <ul class="box">
+                <li><a href="about.html">About Us</a></li>
+                <li><a href="services.html">Courses</a></li>
+                <li><a href="cart.html">Checkout</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+        </li>
+        <li class="features">
+           <h2>What we offer</h2>
+
+           <ul class="box">
+            <li><a href="donations.html">3 Month courses</a></li>
+            <li><a href="donations.html">6 Month courses</a></li>
+            <li><a href="donations.html">Cart</a></li>
+            <li><a href="volunteer.html">Checkout</a></li>
+           </ul>
+        </li>
+        <li>
+           <h2>Contact</h2>
+
+           <ul class="box">
+            <li><a href="contact.html">+27 68 347 0249</a></li>
+            <li><a href="contact.html">empoweringthenation@gmail.com</a></li>
+            <li><a href="contact.html">12 Radar Dr, Durban North, Durban, 4051</a></li>
+            <li><a href="contact.html">something</a></li>
+           </ul>
+        </li>
+    </ul>
+    <div class="footer-bottom">
+        <p>All rights reserved by &copy;Empowering The Nation 2023.</p>
+    </div>
+</footer>
+</body>
+</html>

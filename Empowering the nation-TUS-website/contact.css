@@ -1,0 +1,379 @@
+*{
+    margin: 0;
+    padding: 0;
+    font-family: 'Dosis',sans-serif;
+    box-sizing: border-box;
+}
+body{
+    position: relative;
+    min-height: 100vh;
+    width: 100%;
+    min-height: 100%;  
+    background: rgb(255, 219, 88);
+}
+.sidebar{
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 78px;
+    background: none;
+    padding: 6px 14px;
+    transition: all 0.5s ease;
+    z-index: 5;
+}
+.sidebar.active{
+    width: 240px;
+    background-color: white;
+}
+.sidebar .logo-content .logo img{
+    display: flex;
+    height: 50px;
+    width: 80%;
+    align-items: center;
+    opacity: 0;
+    pointer-events: none;
+}
+.sidebar.active .logo-content .logo img{
+    opacity: 1;
+    pointer-events: none;
+}
+.sidebar #btn{
+    position: absolute;
+    left: 50%;
+    top: 6px;
+    font-size: 20px;
+    height: 50px;
+    width: 50px;
+    text-align: center;
+    line-height: 50px;
+    transform: translateX(-50%);
+    color: rgb(255, 170, 51);
+}
+.sidebar.active #btn{
+    left: 90%;
+}
+.sidebar ul{
+    margin-top: 20px;
+}
+.sidebar ul li{
+    list-style: none;
+    height: 50px;
+    width: 100%;
+    position: relative;
+    margin: 0 5px;
+    line-height: 50px;
+}
+.sidebar .links_name{
+    opacity: 0;
+    pointer-events: none;
+}
+.sidebar.active .links_name{
+    opacity: 1;
+    pointer-events: auto;
+}
+.sidebar ul li .tooltip{
+    position: absolute;
+    height: 35px;
+    width: 122px;
+    background: white;
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
+    left: 122px;
+    top: 0;
+    transform: translate(-50%, -50%);
+    border-radius: 6px;
+    line-height: 35px;
+    text-align: center;
+    transition: 0s;
+    opacity: 0;
+    pointer-events: none;
+    display: block;
+}
+.sidebar.active ul li .tooltip{
+    display: block;
+}
+.sidebar.active ul li:hover .tooltip{
+    top: 50%;
+    transition: all 0.5s ease;
+    opacity: 0;
+    display: block;
+}
+.sidebar ul li:hover .tooltip{
+    opacity: 1;
+    display: block;
+    transition: all 0.4s ease;
+    top: 50%;
+}
+.sidebar ul li input{
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    left: 0;
+    top: 0;
+    border-radius: 12px;
+    outline: none;
+    border: none;
+    background: transparent;
+    padding-left: 50px;
+    font-size: 18px;
+    color: black;
+}
+.sidebar ul li .bx-search{
+    position: absolute;
+    z-index: 99;
+    color: rgb(255, 170, 51);
+    font-size: 32px;
+    background: none;
+}
+.sidebar ul li .bx-search:hover{
+    background: white;
+    color: #1d1b31;
+}
+.sidebar ul li a{
+    display: flex;
+    align-items: center;
+    text-decoration: none;
+    transition: all 0.4s ease;
+    border-radius: 12px;
+    color: black;
+    white-space: nowrap;
+}
+.sidebar ul li a:hover{
+    color: black;
+    background: rgba(239, 207, 227);
+}
+.sidebar ul li a i{
+    height: 50px;
+    min-width: 50px;
+    border-radius: 12px;
+    line-height: 50px;
+    text-align: center;
+    color: rgb(255, 170, 51);
+}
+/* the css for the navigation bar ends here*/
+@media(max-width: 780px){
+   .sidebar{
+    width: 30px;
+   }
+   .sidebar.active{
+    width: 200px;
+   }
+   .sidebar ul li{
+    width: 100%;
+   }
+   .sidebar ul li a i{
+    height: 20px;
+    width: 20px;
+    line-height: 20px;
+    min-width: 10px;
+    text-align: center;
+    margin-left: -10px;
+   }
+   .sidebar ul li .bx-search{
+    font-size: 20px;
+    margin-left: -10px;
+    display: block;
+   }
+}
+/*the css for the navigationbar ends here*/
+
+/*the css for the contact page starts here*/
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, Helvetica, sans-serif;
+}
+.contact{
+    position: relative;
+    min-height: 10vh;
+    padding: 50px 100px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}   
+.contact .content{
+    max-width: 800px;
+    text-align: center;
+}
+.contact .content h1{
+    font-size: 40px;
+    color: rgb(255, 170, 51);
+    padding: 10px;
+}
+.contact .content p{
+    color: black;
+    font-weight: 300;
+}
+.container{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 100px;
+}
+.container .contactInfo{
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+}
+.container .contactInfo .box .text{
+    display: flex;
+    flex-direction: column;
+    margin-left: 20px;
+    font-size: 16px;
+    font-weight: 300;
+    color: black;
+    padding: 10px;
+}
+.contactForm{
+    width: 50%;
+    padding: 30px;
+    background-color: white;
+}
+*,*:before,*:after{
+    box-sizing: border-box;
+}
+#form{
+    width: 400px;
+    margin: 20vh auto 0 auto;
+    padding: 20px;
+    background: whitesmoke;
+    border-radius: 4px;
+    font-size: 12px;
+}
+#form h1{
+    color: black;
+    text-align: center;
+    font-size: 40px;
+}
+#form button{
+    padding: 10px;
+    margin-top: 10px;
+    width: 100%;
+    background: linear-gradient(to right, rgba(239, 207, 227), rgb(255, 219, 88));
+    border: none;
+    border-radius: 30px;
+}
+.input-control{
+    display: flex;
+    flex-direction: column;
+    font-size: 20px;
+}
+.input-control input{
+    border: 2px solid white;
+    border-radius: 4px;
+    display: block;
+    font-size: 12px;
+    padding: 10px;
+    width: 95%;
+}
+.input-control input:focus{
+    outline: 0;
+}
+.input-control.success input{
+    border-color: green;
+}
+.input-control.error input{
+    border-color: red;
+}
+.input-control .error{
+    color: red;
+    font-size: 9px;
+    height: 13px;
+}
+ span{
+    font-size: 15px;
+}
+footer{
+    display: flex;
+    flex-flow: row wrap;
+    padding: 50px;
+    color: #fff;
+    background-color: white;
+}
+.footer > *{
+    flex: 1 100%;
+}
+.footer .footer-left{
+    margin-right: 1.25em;
+    margin-bottom: 2em;
+}
+.footer .footer-left img{
+    width: 25%;
+}
+.footer .footer-right h2{
+    font-weight: 600;
+    font-size: 25px;
+    color: rgb(255, 170, 51);
+    font-family: 'Raleway', sans-serif;
+}
+.footer ul{
+    list-style: none;
+    padding-left: 0;
+}
+.footer li{
+    line-height: 2em;
+}
+.footer a{
+    text-decoration: none;
+    font-family: 'Raleway', sans-serif;
+    font-size: 20px;
+}
+.footer-right{
+    display: -webkit-flex;
+    display: -moz-flex;
+    display: -ms-flex;
+    display: -o-flex;
+    flex-flow: row wrap;
+}
+.footer-right > *{
+    flex: 1 50%;
+    margin-right: 1.25em;
+}
+.box a{
+    color: rgb(255, 170, 51);
+}
+.footer-bottom p{
+    text-align: center;
+    color: black;
+    padding-top: 50px;
+    font-family: 'Raleway', sans-serif;
+    font-size: 20px;
+}
+.footer-left p{
+    padding-right: 20%;
+    color: #999;
+    padding: 20px;
+    font-family: 'Raleway', sans-serif;
+    font-size: 20px;
+}
+.socials a{
+    background: rgb(255, 170, 51);
+    width: 40px;
+    height: 40px;
+    display: inline-block;
+    margin-right: 10px;
+}
+.socials a i{
+    color: #e7f2f4;
+    padding: 10px 12px;
+    font-size: 20px;
+}
+@media screen and (min-width: 600px){
+    .footer-right > *{
+        flex: 1;
+    }
+    .footer-left{
+        flex: 1 0px;
+    }
+    .footer-right{
+        flex: 2 0px;
+    }
+}
+@media (max-width: 600px){
+    .footer{
+        padding: 15px;
+    }
+}

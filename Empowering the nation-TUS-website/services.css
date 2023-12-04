@@ -1,0 +1,455 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    position: relative;
+    min-height: 100vh;
+    width: 100%;
+    min-height: 100%;  
+    align-items: center;
+    justify-content: center;
+    padding: 3px;
+    background: rgb(255, 219, 88);
+}
+.sidebar{
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 78px;
+    background: none;
+    padding: 6px 14px;
+    transition: all 0.5s ease;
+    z-index: 5;
+}
+.sidebar.active{
+    width: 240px;
+    background-color: white;
+}
+.sidebar .logo-content .logo img{
+    display: flex;
+    height: 50px;
+    width: 80%;
+    align-items: center;
+    opacity: 0;
+    pointer-events: none;
+}
+.sidebar.active .logo-content .logo img{
+    opacity: 1;
+    pointer-events: none;
+}
+.sidebar #btn{
+    position: absolute;
+    left: 50%;
+    top: 6px;
+    font-size: 20px;
+    height: 50px;
+    width: 50px;
+    text-align: center;
+    line-height: 50px;
+    transform: translateX(-50%);
+    color: rgb(255, 170, 51);
+}
+.sidebar.active #btn{
+    left: 90%;
+}
+.sidebar ul{
+    margin-top: 20px;
+}
+.sidebar ul li{
+    list-style: none;
+    height: 50px;
+    width: 100%;
+    position: relative;
+    margin: 0 5px;
+    line-height: 50px;
+}
+.sidebar .links_name{
+    opacity: 0;
+    pointer-events: none;
+}
+.sidebar.active .links_name{
+    opacity: 1;
+    pointer-events: auto;
+}
+.sidebar ul li .tooltip{
+    position: absolute;
+    height: 35px;
+    width: 122px;
+    background: white;
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
+    left: 122px;
+    top: 0;
+    transform: translate(-50%, -50%);
+    border-radius: 6px;
+    line-height: 35px;
+    text-align: center;
+    transition: 0s;
+    opacity: 0;
+    pointer-events: none;
+    display: block;
+}
+.sidebar.active ul li .tooltip{
+    display: block;
+}
+.sidebar.active ul li:hover .tooltip{
+    top: 50%;
+    transition: all 0.5s ease;
+    opacity: 0;
+    display: block;
+}
+.sidebar ul li:hover .tooltip{
+    opacity: 1;
+    display: block;
+    transition: all 0.4s ease;
+    top: 50%;
+}
+.sidebar ul li input{
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    left: 0;
+    top: 0;
+    border-radius: 12px;
+    outline: none;
+    border: none;
+    background: transparent;
+    padding-left: 50px;
+    font-size: 18px;
+    color: black;
+}
+.sidebar ul li .bx-search{
+    position: absolute;
+    z-index: 99;
+    color: rgb(255, 170, 51);
+    font-size: 32px;
+    background: none;
+}
+.sidebar ul li .bx-search:hover{
+    background: white;
+    color: #1d1b31;
+}
+.sidebar ul li a{
+    display: flex;
+    align-items: center;
+    text-decoration: none;
+    transition: all 0.4s ease;
+    border-radius: 12px;
+    color: black;
+    white-space: nowrap;
+}
+.sidebar ul li a:hover{
+    color: black;
+    background: rgb(255, 192, 0);
+}
+.sidebar ul li a i{
+    height: 50px;
+    min-width: 50px;
+    border-radius: 12px;
+    line-height: 50px;
+    text-align: center;
+    color: rgb(255, 170, 51);
+}
+@media(max-width: 780px){
+    .sidebar{
+     width: 30px;
+    }
+    .sidebar.active{
+     width: 200px;
+    }
+    .sidebar ul li{
+     width: 100%;
+    }
+    .sidebar ul li a i{
+     height: 20px;
+     width: 20px;
+     line-height: 20px;
+     min-width: 10px;
+     text-align: center;
+     margin-left: -10px;
+    }
+    .sidebar ul li .bx-search{
+     font-size: 20px;
+     margin-left: -10px;
+     display: block;
+    }
+ }
+/*the css for the navigation ends here*/
+
+.wrapper{
+    font-family: 'raleway';
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+.wrapper h1{
+    font-size: 3em;
+    margin: 25px 0;
+    text-align: center;
+    font-weight: 500;
+    color: rgb(255, 170, 51);
+}
+.content-box{
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    width: 1000px;
+    margin-top: 30px;
+}
+.card{
+    min-height: 220px;
+    width: 320px;
+    padding: 30px;
+    border-radius: 5px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    background: #fff;
+    margin: 10px 4px;
+    box-shadow: 0px 20px 30px rgba(0, 0, 0, 0.2);
+    transition: 0.3s;
+}
+.card i{
+    margin: 20px;
+    color: rgb(255, 170, 51);
+}
+.card h2{
+    margin-bottom: 12px;
+    font-weight: 400;
+    text-align: center;
+}
+.card p{
+    color: #6c757d;
+    text-align: center;
+}
+/*the css responsiveness*/
+@media(max-width:991px)
+{
+    .wrapper{
+        padding: 25px;
+    }
+    .wrapper h1{
+        font-size: 2.5em;
+        font-weight: 600;
+    }
+    .content-box{
+        flex-direction: column;
+        width: 100%;
+    }
+    .card{
+        min-width: 300px;
+        margin: 10px auto;
+    }
+}
+h1{
+    text-align: center;
+    font-size: 50px;
+    color: rgb(255, 170, 51);
+}
+.container{
+    max-width: 950px;
+    width: 100%;
+    padding: 80px 0;
+    overflow-x: hidden;
+    margin-left: 200px;
+}
+.container .main-cards{
+    width: 200%;
+    display: flex;
+    justify-content: space-evenly;
+    transition: all 1s ease;
+}
+#two:checked ~ .main-cards{
+    margin-left: -100%;
+}
+.main-cards .cards{
+    display: flex;
+    justify-content: space-between;
+    margin: 0 20px;
+    width: calc(100% / 2 - 10px);
+    flex-wrap: wrap;
+}
+.main-cards .cards .card{
+    background: white;
+    width: calc(100% / 4 -10px);
+    padding: 30px;
+    border-radius: 24px;
+    transition: all 0.4s ease;
+}
+.main-cards .cards .card:hover{
+    transform: translateY(-15px);
+}
+.cards .card .content{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+.cards .card .content .img{
+    height: 130px;
+    width: 130px;
+    margin-bottom: 14px;
+    background: rgb(255, 170, 51);
+    border-radius: 50%;
+    padding: 3px;
+}
+.card .content .img img{
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+    border-radius: 50%;
+    background: white;
+    border: 3px solid white;
+}
+.card .content .details .name{
+    font-size: 20px;
+    font-weight: 500;
+}
+.card .content .details .job{
+    font-size: 20px;
+    color: black;
+}
+.button{
+    display: flex;
+    margin: 20px;
+    justify-content: center;
+}
+.button label{
+    height: 15px;
+    width: 15px;
+    background: white;
+    margin: 0 4px;
+    border-radius: 50%;
+    transition: all 0.5s ease;
+}
+.button label.active{
+    width: 35px;
+}
+#one:checked ~ .button label.one{
+    width: 35px;
+}
+#two:checked ~ .button label.two{
+    width: 35px;
+}
+#one:checked ~ .button label.two{
+    width: 15px;
+}
+input[type="radio"]{
+    display: none;
+}
+@media (max-width: 780px){
+    .main-cards .cards .card{
+        width: calc(100% / 2 -10px);
+        margin: 20px 0 10px 0;
+    }
+    .container{
+        margin-left: 200px;
+    }
+}
+@media (max-width: 600px){
+    .main-cards .cards .card{
+        width: 100%;
+    }
+    .container{
+        margin-left: 10px;
+    }
+}
+*,*:before,*:after{
+    box-sizing: border-box;
+}
+footer{
+    display: flex;
+    flex-flow: row wrap;
+    padding: 50px;
+    color: #fff;
+    background-color: white;
+}
+.footer > *{
+    flex: 1 100%;
+}
+.footer .footer-left{
+    margin-right: 1.25em;
+    margin-bottom: 2em;
+}
+.footer .footer-left img{
+    width: 25%;
+}
+.footer .footer-right h2{
+    font-weight: 600;
+    font-size: 25px;
+    color: rgb(255, 170, 51);
+    font-family: 'Raleway', sans-serif;
+}
+.footer ul{
+    list-style: none;
+    padding-left: 0;
+}
+.footer li{
+    line-height: 2em;
+}
+.footer a{
+    text-decoration: none;
+    font-family: 'Raleway', sans-serif;
+    font-size: 20px;
+}
+.footer-right{
+    display: -webkit-flex;
+    display: -moz-flex;
+    display: -ms-flex;
+    display: -o-flex;
+    flex-flow: row wrap;
+}
+.footer-right > *{
+    flex: 1 50%;
+    margin-right: 1.25em;
+}
+.box a{
+    color: rgb(255, 170, 51);
+}
+.footer-bottom p{
+    text-align: center;
+    color: black;
+    padding-top: 50px;
+    font-family: 'Raleway', sans-serif;
+    font-size: 20px;
+}
+.footer-left p{
+    padding-right: 20%;
+    color: #999;
+    padding: 20px;
+    font-family: 'Raleway', sans-serif;
+    font-size: 20px;
+}
+.socials a{
+    background: rgb(255, 170, 51);
+    width: 40px;
+    height: 40px;
+    display: inline-block;
+    margin-right: 10px;
+}
+.socials a i{
+    color: #e7f2f4;
+    padding: 10px 12px;
+    font-size: 20px;
+}
+@media screen and (min-width: 600px){
+    .footer-right > *{
+        flex: 1;
+    }
+    .footer-left{
+        flex: 1 0px;
+    }
+    .footer-right{
+        flex: 2 0px;
+    }
+}
+@media (max-width: 600px){
+    .footer{
+        padding: 15px;
+    }
+}

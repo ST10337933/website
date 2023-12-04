@@ -1,0 +1,550 @@
+*{
+    margin: 0;
+    padding: 0;
+    font-family: 'Dosis',sans-serif;
+    box-sizing: border-box;
+}
+body{
+    position: relative;
+    min-height: 100vh;
+    width: 100%;
+    min-height: 100%;   
+    background-color: rgb(255, 219, 88);
+}
+.sidebar{
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 78px;
+    background: none;
+    padding: 6px 14px;
+    transition: all 0.5s ease;
+    z-index: 999;
+}
+.sidebar.active{
+    width: 240px;
+    background-color: white;
+}
+.sidebar .logo-content .logo img{
+    display: flex;
+    height: 50px;
+    width: 80%;
+    align-items: center;
+    opacity: 0;
+    pointer-events: none;
+}
+.sidebar.active .logo-content .logo img{
+    opacity: 1;
+    pointer-events: none;
+}
+.sidebar #btn{
+    position: absolute;
+    left: 50%;
+    top: 6px;
+    font-size: 20px;
+    height: 50px;
+    width: 50px;
+    text-align: center;
+    line-height: 50px;
+    transform: translateX(-50%);
+    color: rgb(255, 170, 51);
+}
+.sidebar.active #btn{
+    left: 90%;
+}
+.sidebar ul{
+    margin-top: 20px;
+}
+.sidebar ul li{
+    list-style: none;
+    height: 50px;
+    width: 100%;
+    position: relative;
+    margin: 0 5px;
+    line-height: 50px;
+}
+.sidebar .links_name{
+    opacity: 0;
+    pointer-events: none;
+}
+.sidebar.active .links_name{
+    opacity: 1;
+    pointer-events: auto;
+}
+.sidebar ul li .tooltip{
+    position: absolute;
+    height: 35px;
+    width: 122px;
+    background: white;
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
+    left: 122px;
+    top: 0;
+    transform: translate(-50%, -50%);
+    border-radius: 6px;
+    line-height: 35px;
+    text-align: center;
+    transition: 0s;
+    opacity: 0;
+    pointer-events: none;
+    display: block;
+}
+.sidebar.active ul li .tooltip{
+    display: block;
+}
+.sidebar.active ul li:hover .tooltip{
+    top: 50%;
+    transition: all 0.5s ease;
+    opacity: 0;
+    display: block;
+}
+.sidebar ul li:hover .tooltip{
+    opacity: 1;
+    display: block;
+    transition: all 0.4s ease;
+    top: 50%;
+}
+.sidebar ul li input{
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    left: 0;
+    top: 0;
+    border-radius: 12px;
+    outline: none;
+    border: none;
+    background: transparent;
+    padding-left: 50px;
+    font-size: 18px;
+    color: black;
+}
+.sidebar ul li .bx-search{
+    position: absolute;
+    z-index: 99;
+    color: rgb(255, 170, 51);
+    font-size: 32px;
+    background: none;
+}
+.sidebar ul li .bx-search:hover{
+    background: white;
+    color: #1d1b31;
+}
+.sidebar ul li a{
+    display: flex;
+    align-items: center;
+    text-decoration: none;
+    transition: all 0.4s ease;
+    border-radius: 12px;
+    color: black;
+    white-space: nowrap;
+}
+.sidebar ul li a:hover{
+    color: black;
+    background: rgb(255, 192, 0);
+}
+.sidebar ul li a i{
+    height: 50px;
+    min-width: 50px;
+    border-radius: 12px;
+    line-height: 50px;
+    text-align: center;
+    color: rgb(255, 170, 51);
+}
+/* the css for the navigation bar ends here*/
+@media(max-width: 780px){
+   .sidebar{
+    width: 30px;
+   }
+   .sidebar.active{
+    width: 200px;
+   }
+   .sidebar ul li{
+    width: 100%;
+   }
+   .sidebar ul li a i{
+    height: 20px;
+    width: 20px;
+    line-height: 20px;
+    min-width: 10px;
+    text-align: center;
+    margin-left: -10px;
+   }
+   .sidebar ul li .bx-search{
+    font-size: 20px;
+    margin-left: -10px;
+    display: block;
+   }
+}
+section{
+    padding: 100px 200px;
+}
+.home{
+    position: relative;
+    width: 100%;
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    background: rgb(255, 192, 0);
+}
+.home:before{
+    z-index: 777;
+    content: '';
+    position: absolute;
+    background: rgba(251, 3, 3, 0.034);
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+}
+.home .content{
+    z-index: 888;
+    color: white;
+    width: 70%;
+    margin-top: 50px;
+    display: none;
+}
+.home .content.active{
+    display: block;
+}
+.home .content h1{
+    font-size: 4em;
+    font-weight: 400;
+    text-transform: uppercase;
+    letter-spacing: 5px;
+    line-height: 75px;
+    margin-bottom: 40px;
+    font-family: 'Philosopher', sans-serif;
+    color: rgb(255, 170, 51);
+}
+.home .content p{
+    margin-bottom: 65px;
+    color: white;
+    font-size: 30px;
+}
+.home .content a{
+    background: white;
+    padding: 15px 35px;
+    color: gold;
+    font-size: 1.1em;
+    font-weight: 500;
+    text-decoration: none;
+    border-radius: 2px;
+}
+.home .content a:hover{
+    background: gold;
+    color: white;
+}
+.home .media-icons{
+    z-index: 888;
+    position: absolute;
+    right: 30px;
+    display: flex;
+    flex-direction: column;
+    transition: 0.5s ease;
+}
+.home .media-icons a{
+    color: white;
+    font-size: 1.6em;
+    transition: 0.3s ease;
+}
+.home .media-icons a:not(:last-child){
+    margin-bottom: 20px;
+}
+.home .media-icons a:hover{
+    transform: scale(1.3);
+    color: gold;
+}
+.home img{
+    z-index: 000;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+.slider-navigation{
+    z-index: 888;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transform: translateY(80px);
+    margin-bottom: 12px;
+}
+.slider-navigation .nav-btn{
+    width: 12px;
+    height: 12px;
+    background: white;
+    border-radius: 50%;
+    cursor: pointer;
+    box-shadow: 0 0 2px rgba(255, 255, 255, 0.5);
+    transition: 0.3s ease;
+}
+.slider-navigation .nav-btn.active{
+    background: gold;
+}
+.slider-navigation .nav-btn:not(:last-child){
+    margin-right: 20px;
+}
+.slider-navigation .nav-btn:hover{
+    transform: scale(1.2);
+}
+.img-slide{
+    position: absolute;
+    width: 100%;
+    clip-path: circle(0% at 0 50%);
+}
+.img-slide.active{
+    clip-path: circle(150% at 0 50%);
+    transition: 2s ease;
+    transition-property: clip-path;
+}
+@media (max-width: 1040px){
+    section{
+        padding: 100px 20px;
+    }
+    .home .media-icons{
+        right: 15px;
+    }
+}
+@media (max-width: 560px){
+    .home .content h1{
+        font-size: 3em;
+        line-height: 60px;
+    }
+}
+.wrapper{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    margin-top: 10px;
+    position: relative;
+}
+.wrapper h1{
+    font-size: 3rem;
+    margin: 25px 0;
+    text-align: center;
+    font-weight: 500;
+    color: rgb(255, 170, 51);
+    font-family: 'Philosopher', sans-serif;
+}
+.content-box{
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    width: 920px;
+    margin-top: 30px;
+    z-index: 6;
+    overflow: hidden;
+}
+.card{
+    min-height: 100px;
+    width: 220px;
+    padding: 30px;
+    border-radius: 5px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    background: #fff;
+    margin: 10px 4px;
+    box-shadow: 0px 20px 30px rgba(0, 0, 0, 0.2);
+    transition: 0.3s;
+}
+.card a{
+    text-decoration: none;
+    text-align: center;
+    color: rgb(255, 170, 51);
+    font-family: 'Amethysta', serif;
+}
+.card i{
+    margin: 20px;
+    color: rgb(255, 170, 51);
+}
+.card h2{
+    margin-bottom: 12px;
+    font-weight: 400;
+    text-align: center;
+}
+.card p{
+    color: #6c757d;
+    text-align: center;
+}
+@media(max-width:991px)
+{
+    .wrapper{
+        padding: 25px;
+    }
+    .wrapper h1{
+        font-size: 2.5em;
+        font-weight: 600;
+    }
+    .content-box{
+        flex-direction: column;
+        width: 100%;
+    }
+    .card{
+        min-width: 250px;
+        margin: 10px auto;
+    }
+}
+.about{
+    font-family: 'raleway';
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    margin-top: 10px;
+    position: relative;
+}
+.about h1{
+    margin-top: 40px;
+    text-align: center;
+    color: rgb(255, 170, 51);
+    font-size: 3rem;
+    font-weight: 500;
+    font-family: 'Philosopher', sans-serif;
+}
+.about .card1{
+    min-height: 100px;
+    width: 600px;
+    padding: 30px;
+    border-radius: 5px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    background: #fff;
+    margin: 10px 4px;
+    box-shadow: 0px 20px 30px rgba(0, 0, 0, 0.2);
+    transition: 0.3s;
+}
+.about .card1 p{
+    font-size: 20px;
+    font-family: 'Raleway', sans-serif;
+}
+.about .card1 .readmore{
+    font-size: 30px;
+    padding: 10px;
+}
+.about .card1 .readmore a{
+    text-decoration: none;
+    color: rgb(255, 170, 51);
+    font-weight: bold;
+    font-size: 40px;
+    font-family: 'Philosopher', sans-serif;
+}
+@media(max-width:991px)
+{
+    .about{
+        padding: 25px;
+    }
+    .about h1{
+        font-size: 2.5em;
+        font-weight: 600;
+    }
+     .about .card1{
+        flex-direction: column;
+        width: 200px;
+    }
+    .about .card1 .readmore a{
+        font-size: 17px;
+    }
+}
+*,*:before,*:after{
+    box-sizing: border-box;
+}
+footer{
+    display: flex;
+    flex-flow: row wrap;
+    padding: 50px;
+    color: #fff;
+    background-color: white;
+}
+.footer > *{
+    flex: 1 100%;
+}
+.footer .footer-left{
+    margin-right: 1.25em;
+    margin-bottom: 2em;
+}
+.footer .footer-left img{
+    width: 25%;
+}
+.footer .footer-right h2{
+    font-weight: 600;
+    font-size: 25px;
+    color: rgb(255, 170, 51);
+    font-family: 'Raleway', sans-serif;
+}
+.footer ul{
+    list-style: none;
+    padding-left: 0;
+}
+.footer li{
+    line-height: 2em;
+}
+.footer a{
+    text-decoration: none;
+    font-family: 'Raleway', sans-serif;
+    font-size: 20px;
+}
+.footer-right{
+    display: -webkit-flex;
+    display: -moz-flex;
+    display: -ms-flex;
+    display: -o-flex;
+    flex-flow: row wrap;
+}
+.footer-right > *{
+    flex: 1 50%;
+    margin-right: 1.25em;
+}
+.box a{
+    color: rgb(255, 170, 51);
+}
+.footer-bottom p{
+    text-align: center;
+    color: black;
+    padding-top: 50px;
+    font-family: 'Raleway', sans-serif;
+    font-size: 20px;
+}
+.footer-left p{
+    padding-right: 20%;
+    color: #999;
+    padding: 20px;
+    font-family: 'Raleway', sans-serif;
+    font-size: 20px;
+}
+.socials a{
+    background: rgb(255, 170, 51);
+    width: 40px;
+    height: 40px;
+    display: inline-block;
+    margin-right: 10px;
+}
+.socials a i{
+    color: #e7f2f4;
+    padding: 10px 12px;
+    font-size: 20px;
+}
+@media screen and (min-width: 600px){
+    .footer-right > *{
+        flex: 1;
+    }
+    .footer-left{
+        flex: 1 0px;
+    }
+    .footer-right{
+        flex: 2 0px;
+    }
+}
+@media (max-width: 600px){
+    .footer{
+        padding: 15px;
+    }
+}
